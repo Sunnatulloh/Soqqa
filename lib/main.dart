@@ -384,7 +384,7 @@ class _MainDashboardState extends State<MainDashboard> {
   String _formatMoney(double val) {
     return val.toStringAsFixed(0).replaceAllMapped(
       RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-      (m) => '${m} ',
+      (m) => '${m[1]} ',
     );
   }
 
@@ -1121,7 +1121,7 @@ class _FastEntryPadSheetState extends State<FastEntryPadSheet> {
     final numVal = double.tryParse(raw) ?? 0;
     return numVal.toStringAsFixed(0).replaceAllMapped(
       RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
-      (m) => '${m} ',
+      (m) => '${m[1]} ',
     );
   }
 
